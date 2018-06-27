@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.sky {
+    background: url('image/sky.jpg') repeat-x;
+    position: absolute;
+    width: 1550vw;
+    height: 100vh;
+    z-index: -1;
+    animation: sky 9s linear infinite;
+}
+
+@keyframes sky {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -5100px 0;
+    }
+}
+
+.bird{
+    background: url("image/birds.png");
+    position: absolute;
+    width: 140px;
+    height: 70px;
+    animation: flay 1s steps(4) infinite alternate;
+}
+
+@keyframes flay {
+    from {
+        top: 50%;
+        background-position: 0 0;
+    }
+    to {
+        top: 50%;
+        background-position: 0 288px;
+    }
+}
+
+.flag{
+    background: url(image/racing-flag.png) no-repeat;
+    position: absolute;
+    width: 16vw;
+    height: 16vh;
+    top: 30px;
+    right: 3vw;
+background-size: 16vh, 16vw; 
+}
+.line{
+    height: 100%;
+    width: 0.3%;
+    position: absolute;
+    right: 20vw;
+    border-right: 2px dotted black; 
+    border-left: 2px dotted black;
+}
+.number{
+   width: 100px;
+   display: flex;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+}
+
+.hide{
+    display: none;
+}
